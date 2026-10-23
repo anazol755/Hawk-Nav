@@ -1,5 +1,7 @@
 #  Campus Map App
 
+> **Note:** This repository is a continuation of an earlier repository for our Senior Design project. The original commit history was not carried over. The code was uploaded here by Claude (Claude Code), which made only two commits: the initial commit containing the original project, and the commit adding this note. All of the application code was written by our team.
+
 This project was developed as part of our **Senior Design Group Project** at university. It’s a full-stack web application designed to provide students and faculty with a dynamic, interactive campus map for navigation, event tracking, and building information.
 
 ---

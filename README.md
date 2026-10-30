@@ -1,5 +1,5 @@
 #  Campus Map App
-==repository was archived==
+repo was archived
 
 > **Note:** This repository is a continuation of an earlier repository for our Senior Design project. The original commit history was not carried over. The code was uploaded here by Claude (Claude Code), which made only two commits: the initial commit containing the original project, and the commit adding this note. All of the application code was written by our team. 
 

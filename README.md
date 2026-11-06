@@ -2,7 +2,12 @@
 
 > **Status:** This repository is archived and is not actively maintained.
 
-> **Note:** This repository is a continuation of an earlier repository for our Senior Design project. The original commit history was not carried over. The code was uploaded here by Claude (Claude Code), which made only two commits: the initial commit containing the original project, and the commit adding this note. All of the application code was written by our team. 
+> **Note:** This repository is a continuation of an earlier repository for our Senior Design project. The original commit history was not carried over. All of the application code was written by our team.
+>
+> Claude (Claude Code) was used for this repository at these points:
+>
+> - **October 22, 2026:** Uploaded the code here, making two commits: the initial commit containing the original project, and the commit adding this note.
+> - **November 6, 2026:** Corrected this README, including the setup steps, tech stack, and project structure, and removed claims the repository doesn't support. It also updated this note.
 
 This project was developed as part of our **Senior Design Group Project** at university. It’s a full-stack web application designed to provide students and faculty with a dynamic, interactive campus map for navigation, event tracking, and building information.
 

@@ -2,7 +2,7 @@
 
 > **Status:** This repository is archived and is not actively maintained.
 
-> **Note:** This repository is a continuation of an earlier repository for our Senior Design project. The original commit history was not carried over. All of the application code was written by our team.
+> **Note:** This repository is a continuation of an earlier repository for our Senior Design project. The original commit history was not carried over. 
 >
 > Claude (Claude Code) was used for this repository at these points:
 >

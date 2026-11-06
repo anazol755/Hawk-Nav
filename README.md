@@ -1,5 +1,6 @@
-#  Campus Map App
-repo was archived
+#  Hawk Nav
+
+> **Status:** This repository is archived and is not actively maintained.
 
 > **Note:** This repository is a continuation of an earlier repository for our Senior Design project. The original commit history was not carried over. The code was uploaded here by Claude (Claude Code), which made only two commits: the initial commit containing the original project, and the commit adding this note. All of the application code was written by our team. 
 
@@ -31,27 +32,14 @@ This project was developed as part of our **Senior Design Group Project** at uni
 - **Sprint 4:** Interactive campus map integration.  
 - **Sprint 5:** Hardening, performance tuning, deployment.  
 
-### 5. Testing
-- Unit tests for models, controllers, and utilities.  
-- Integration tests for APIs.  
-- End-to-End (E2E) tests for event creation & navigation flows.  
-- Non-functional testing: performance, security, accessibility.  
-
-### 6. Deployment
-- CI/CD pipeline for automated builds and testing.  
+### 5. Deployment
 - Backend hosted on Node.js server.  
 - MongoDB cloud deployment.  
 - Versioned releases with rollback plan.  
 
-### 7. Maintenance
-- Regular bug fixes and dependency updates.  
-- Feedback loop with users to guide new features.  
-- Security patches and database backups scheduled.  
-- Future scope: AI chatbot for event Q&A, richer building data, push notifications.  
-
 ---
 
- This SDLC ensured the Campus Map App was **delivered on time, secure, and user-friendly** while leaving room for future enhancements.
+ This SDLC ensured the Campus Map App was **delivered on time and user-friendly** while leaving room for future enhancements.
 
 ##  Features
 
@@ -60,7 +48,7 @@ This project was developed as part of our **Senior Design Group Project** at uni
 -  Event creation and display  
 -  Role-based access (students vs. faculty)  
 -  Media uploads (building images, event posters)  
--  Secure authentication using JWT  
+-  Authentication using JWT  
 
 ---
 
@@ -69,14 +57,17 @@ This project was developed as part of our **Senior Design Group Project** at uni
 ### Frontend
 - React  
 - React Router  
+- Material UI  
 - Axios  
-- Leaflet (or similar map integration library)  
+- Google Maps  
+- Google Calendar API  
 
 ### Backend
 - Node.js  
 - Express.js  
 - MongoDB with Mongoose  
 - Multer (for file uploads)  
+- Nodemailer (for password reset emails)  
 - JWT (JSON Web Token) for authentication  
 
 ---
@@ -86,18 +77,19 @@ This project was developed as part of our **Senior Design Group Project** at uni
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/Campus-Map-App-Group-Project.git
-cd Campus-Map-App-Group-Project
+git clone https://github.com/anazol755/Hawk-Nav.git
+cd Hawk-Nav
 ```
 
 ### 2. Install dependencies
 
 ```bash
-# Install frontend dependencies
-npm install
-
 # Install backend dependencies
 cd Backend
+npm install
+
+# Install frontend dependencies
+cd client/Frontend
 npm install
 ```
 
@@ -106,12 +98,27 @@ npm install
 Create a `.env` file inside the `/Backend` directory with the following contents:
 
 ```env
-PORT=5000
+PORT=5050
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
+BASE_URL=http://localhost:5050
+FRONTEND_URL=http://localhost:3000
+EMAIL_USER=your_gmail_address
+EMAIL_PASS=your_gmail_app_password
 ```
 
+Create a `.env` file inside the `/Backend/client/Frontend` directory with the following contents:
+
+```env
+REACT_APP_API_URL=http://localhost:5050
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+```
+
+The Google Calendar OAuth client ID is hard-coded at the top of `Backend/client/Frontend/src/components/Calender/Calender.jsx`. Replace it with your own to use the calendar feature.
+
 ### 4. Start the development servers
+
+Run each of these from the repo root, in its own terminal.
 
 **Backend:**
 
@@ -123,32 +130,34 @@ npm start
 **Frontend:**
 
 ```bash
-cd ..
+cd Backend/client/Frontend
 npm start
 ```
 
 - Frontend will run on: `http://localhost:3000`  
-- Backend will run on: `http://localhost:5000`  
+- Backend will run on: `http://localhost:5050`  
 
 ---
 
 ##  Project Structure
 
 ```
-Campus-Map-App-Group-Project/
+Hawk-Nav/
 │
 ├── Backend/                 # Express server + MongoDB
+│   ├── client/Frontend/     # React frontend code
+│   │   ├── public/          # Static files
+│   │   ├── src/             # React components
+│   │   └── package.json     # Frontend dependencies
+│   ├── config/
 │   ├── controllers/
 │   ├── routes/
 │   ├── models/
 │   ├── middleware/
 │   ├── uploads/
+│   ├── package.json         # Backend dependencies
 │   └── server.js
 │
-├── client/                  # (If used) React frontend code
-├── public/                  # Static files
-├── src/                     # React components
-├── package.json             # Frontend dependencies
 └── README.md
 ```
 
@@ -156,7 +165,8 @@ Campus-Map-App-Group-Project/
 
 ##  Contributors
 
-This app was developed by our university Senior Design team:
+This app was developed by our university Senior Design team.
+
 ---
 
 ## License
